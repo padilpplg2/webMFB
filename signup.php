@@ -1,3 +1,21 @@
+<php?
+include 'koneksi.php'
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = mysqli_real_escape_string($koneksi, $_POST['username']);
+    $email = mysqli_real_escape_string($koneksi, $_POST['email']);
+    $password = mysqli_real_escape_string($koneksi, $_POST['password']);
+    
+    // Hash the password before storing
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert user data into the database
+    $sql = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
+
+    if (mysqli_query($koneksi, $sql)) {
+        echo "Registration successful! You can now <a href='login.php'>Login</a>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
