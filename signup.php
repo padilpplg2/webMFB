@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user data into the database
-    $sql = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
+    $sql = "INSERT INTO user (username, email, password) VALUES ('$name', '$email', '$hashed_password')";
 
     if (mysqli_query($koneksi, $sql)) {
         echo "Registration successful! You can now <a href='login.php'>Login</a>";
@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .create-account-container {
-            width: 100%;
-            padding: 150px;
+            width: 150%;
+            padding: 175px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
