@@ -1,21 +1,4 @@
 <php?
-include 'koneksi.php'
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = mysqli_real_escape_string($koneksi, $_POST['username']);
-    $email = mysqli_real_escape_string($koneksi, $_POST['email']);
-    $password = mysqli_real_escape_string($koneksi, $_POST['password']);
-    
-    // Hash the password before storing
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Insert user data into the database
-    $sql = "INSERT INTO user (username, email, password) VALUES ('$name', '$email', '$hashed_password')";
-
-    if (mysqli_query($koneksi, $sql)) {
-        echo "Registration successful! You can now <a href='login.php'>Login</a>";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .create-account-container {
-            width: 150%;
-            padding: 178px;
+            width: 149%;
+            padding: 185px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -91,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <div class="create-account-container">
         <div class="logo">MFB</div>
-        <h1>Create Your Account</h1>
-        <p>Enter your details!</p>
+        <h1>Lupa Password???</h1>
+        <p>Silahkan buat password baru</p>
         <form>
             <input type="text" placeholder="Name" required><br>
             <input type="email" placeholder="Email" required><br>
