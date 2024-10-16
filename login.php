@@ -78,15 +78,15 @@
 
     <div class="login-container">
         <div class="logo">MFB</div>
-        <h1>WELCOME!!</h1>
+        <b><h1>WELCOME!!</h1></b>
         <h2>please sign in before shopping</h2>
         <form>
             <input type="email" placeholder="Email" required><br>
             <input type="password" placeholder="Password" required><br>
             <a href="#" class="forgot-password">Forgot password??</a><br>
-           <a href="http://localhost:8080/web_MFB/tampilan.php"> <button type="submit">LOG IN</button></a>
+           <a href="http://localhost/web_MFB/tampilan.php"> <button type="submit">LOG IN</button></a>
         </form>
-        <a href="http://localhost:8080/web_MFB/signup.php">don't have account? <span>Sign Up</span></a>
+        <a href="http://localhost/webMFB/signup.php">don't have account? <span>Sign Up</span></a>
     </div>
 
     

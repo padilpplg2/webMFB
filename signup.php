@@ -28,14 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80vh;
+            height: 95vh;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
         }
 
         .create-account-container {
-            width: 150%;
+            width: 135%;
             padding: 178px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
