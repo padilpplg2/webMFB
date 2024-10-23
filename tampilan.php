@@ -1,9 +1,13 @@
+<?php
+include ("koneksi.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produk Kami</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -128,6 +132,6 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
