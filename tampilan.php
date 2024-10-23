@@ -1,5 +1,9 @@
 <?php
-include ("koneksi.php")
+include("koneksi.php");
+session_start();
+
+// Ambil nama pengguna dari sesi
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,27 +32,12 @@ include ("koneksi.php")
         header .menu {
             display: flex;
             gap: 15px;
-        }
-
-        header .menu a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
+            position: relative;
         }
 
         header .logo {
             font-size: 24px;
             font-weight: bold;
-        }
-
-        header .search-login {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        header .search-login i {
-            font-size: 20px;
         }
 
         .product-container {
@@ -89,21 +78,68 @@ include ("koneksi.php")
             font-size: 16px;
             color: #333;
         }
+
+        /* Dropdown Styles */
+        .dropbtn {
+            background-color: transparent; /* Mengubah latar belakang menjadi transparan */
+            color: black; /* Ubah warna teks sesuai kebutuhan */
+            padding: 10px;
+            font-size: 16px;
+            
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: rgba(0, 0, 0, 0.1); /* Tambahkan efek hover */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
     </style>
 </head>
 <body>
 
     <header>
         <div class="menu">
-            <a href="#">MAN</a>
-            <a href="#">WOMAN</a>
-            <a href="#">KIDS</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Kategori</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Man</a>
+                    <a href="#">Woman</a>
+                    <a href="#">Kids</a>
+                </div>
+            </div>
         </div>
         <div class="logo">MFB</div>
-        <div class="search-login">
-            <i>🔍</i> <!-- Search Icon -->
-            <i>🛒</i> <!-- Cart Icon -->
-            <a href="#">LOGIN</a>
+        <div class="dropdown">
+            <button onclick="userFunction()" class="dropbtn"><?php echo htmlspecialchars($username); ?></button>
+            <div id="userDropdown" class="dropdown-content">
+                <a href="#">Wishlist</a>
+                <a href="logout.php">Logout</a>
+            </div>
         </div>
     </header>
 
@@ -132,6 +168,27 @@ include ("koneksi.php")
             </div>
         </div>
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function userFunction() {
+            document.getElementById("userDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    if (dropdowns[i].classList.contains('show')) {
+                        dropdowns[i].classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

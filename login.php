@@ -1,3 +1,46 @@
+<?php
+session_start(); // Mulai sesi
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include('koneksi.php'); // Pastikan file koneksi sudah ada
+    
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Siapkan query untuk memeriksa email dan password
+    $stmt = $koneksi->prepare("SELECT password, role FROM user WHERE email = ?"); // Ambil role
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($hashed_password, $role);
+        $stmt->fetch();
+
+        // Verifikasi password
+        if (password_verify($password, $hashed_password)) {
+            $_SESSION['email'] = $email; // Simpan email dalam sesi
+            $_SESSION['role'] = $role; // Simpan role dalam sesi
+            
+            // Arahkan berdasarkan role
+            if ($role === 'admin') {
+                header('Location: admin.php'); // Arahkan ke halaman admin
+            } else {
+                header('Location: tampilan.php'); // Arahkan ke halaman utama
+            }
+            exit;
+        } else {
+            $error = "Password salah!";
+        }
+    } else {
+        $error = "Email tidak ditemukan!";
+    }
+
+    $stmt->close();
+    $koneksi->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +52,7 @@
     <style>
         body {
             font-family: sans-serif;
-            display:flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100vh;
@@ -72,6 +115,10 @@
             color: #a15b00;
             font-size: 30px;
         }
+
+        .error-message {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -80,16 +127,18 @@
         <div class="logo">MFB</div>
         <b><h1>WELCOME!!</h1></b>
         <h2>please sign in before shopping</h2>
-        <form>
-            <input type="email" placeholder="Email" required><br>
-            <input type="password" placeholder="Password" required><br>
+        <?php if (isset($error)): ?>
+            <div class="error-message"><?php echo $error; ?></div>
+        <?php endif; ?>
+        <form method="POST" action="login.php">
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
             <a href="#" class="forgot-password">Forgot password??</a><br>
-           <a href="tampilan.php"> <button type="submit">LOG IN</button></a>
+            <button type="submit">LOG IN</button>
         </form>
         <a href="signup.php">don't have account? <span>Sign Up</span></a>
     </div>
 
-    
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
