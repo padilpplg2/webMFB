@@ -84,9 +84,9 @@
             <input type="email" placeholder="Email" required><br>
             <input type="password" placeholder="Password" required><br>
             <a href="#" class="forgot-password">Forgot password??</a><br>
-           <a href="http://localhost/web_MFB/tampilan.php"> <button type="submit">LOG IN</button></a>
+           <a href="tampilan.php"> <button type="submit">LOG IN</button></a>
         </form>
-        <a href="http://localhost/webMFB/signup.php">don't have account? <span>Sign Up</span></a>
+        <a href="signup.php">don't have account? <span>Sign Up</span></a>
     </div>
 
     

@@ -1,18 +1,27 @@
 <php?
-include 'koneksi.php'
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = mysqli_real_escape_string($koneksi, $_POST['username']);
-    $email = mysqli_real_escape_string($koneksi, $_POST['email']);
-    $password = mysqli_real_escape_string($koneksi, $_POST['password']);
-    
-    // Hash the password before storing
+include ('koneksi.php');
+
+if (isset($_POST['register'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user data into the database
-    $sql = "INSERT INTO user (username, email, password) VALUES ('$name', '$email', '$hashed_password')";
 
-    if (mysqli_query($koneksi, $sql)) {
-        echo "Registration successful! You can now <a href='login.php'>Login</a>";
+    // Siapkan dan jalankan query
+    $stmt = $koneksi->prepare("INSERT INTO user (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $hashed_password);
+
+    if ($stmt->execute()) {
+        header('Location : login.php');
+    } else {
+        header('Location : signup.php');
+    }
+
+    $stmt->close();
+    $koneksi->close();
 }
 ?>
 
