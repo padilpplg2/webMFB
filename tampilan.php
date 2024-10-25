@@ -81,14 +81,14 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
     </h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=blouse">
-       <img alt="Blouse on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/OyaiSMax7N6ZIxb0p2vvD8vMWPBdNQIoRcNg9Ja0Fo26hi6E.jpg" width="300"/>
+      <a href="detalprodukrrq.php">
+       <img alt="Varsity RRQ" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       BLOUSE
+       VARSITY
       </h4>
       <p class="text-red-500 font-bold">
-       Rp 125.000
+       Rp 345.000
       </p>
       <p class="text-gray-600 mb-4">
        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -98,34 +98,34 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
       </button>
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=gown">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/beX8DDYTElyYHqlKjcoSPRXaeSHKsXW7nXaY5Z2vLKToHKqTA.jpg" width="300"/>
+      <a href="detalprodukjacket.php">
+       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       GOWN
+       JACKET
       </h4>
       <p class="text-red-500 font-bold">
-       Rp 450.000
+       Rp 250.000
       </p>
       <p class="text-gray-600 mb-4">
-       GAUN PUTIH SKIBIDI SUCI MIMIPERI
+      Coach Jacket The Finest Waves
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART
       </button>
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=trousers">
-       <img alt="Trousers on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/unzJmv0mI9bTIZNqa41Etqxum1VPfiafx6GzxYQ674ysHKqTA.jpg" width="300"/>
+      <a href="detalproduksepatu.php">
+       <img alt="Trousers on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/I13062318HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       TROUSERS
+       SEPATU
       </h4>
       <p class="text-red-500 font-bold">
-       Rp 50.000
+       Rp 130.000
       </p>
       <p class="text-gray-600 mb-4">
-       Celana Pendek Keren Sigma Abiezzzzzz (HITAM)
+       Sepatu Kulit Classic 
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART
@@ -135,55 +135,54 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
    </section>
    <section class="mt-12">
     <h3 class="text-2xl font-bold mb-4">
-     GOWNS
+     GAUN WANITA
     </h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=gown1">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/beX8DDYTElyYHqlKjcoSPRXaeSHKsXW7nXaY5Z2vLKToHKqTA.jpg" width="300"/>
+      <a href="detalprodukgaun.php">
+       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/H01042411HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       GOWN
+      GAUN HANNA
       </h4>
       <p class="text-red-500 font-bold">
-       $30.00
+       Rp 218.500
       </p>
       <p class="text-gray-600 mb-4">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Hanna Risa Lace Long Tunic H010424      </p>
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+       ADD TO CART
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-lg text-center">
+      <a href="detalprodukgaun3.php">
+       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/H03032314PT_1.JPG" width="300"/>
+      </a>
+      <h4 class="text-xl font-bold">
+       GAUN HANNA
+      </h4>
+      <p class="text-red-500 font-bold">
+       Rp 234.567
+      </p>
+      <p class="text-gray-600 mb-4">
+      Hanna Maxi Dress Rydea Swizz Dot White H030323
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART
       </button>
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=gown2">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/beX8DDYTElyYHqlKjcoSPRXaeSHKsXW7nXaY5Z2vLKToHKqTA.jpg" width="300"/>
+      <a href="detalprodukgaun2.php">
+       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/H01082315HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       GOWN
+       GAUN HANNA
       </h4>
       <p class="text-red-500 font-bold">
-       $30.00
+       Rp 255.555
       </p>
       <p class="text-gray-600 mb-4">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-       ADD TO CART
-      </button>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="product_detail.php?product=gown3">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/beX8DDYTElyYHqlKjcoSPRXaeSHKsXW7nXaY5Z2vLKToHKqTA.jpg" width="300"/>
-      </a>
-      <h4 class="text-xl font-bold">
-       GOWN
-      </h4>
-      <p class="text-red-500 font-bold">
-       $30.00
-      </p>
-      <p class="text-gray-600 mb-4">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Hanna Knit Cardigan With Belt H010823
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART

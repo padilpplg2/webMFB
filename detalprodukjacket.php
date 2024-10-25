@@ -30,13 +30,14 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
    <!-- Image Section -->
    <div class="w-1/2">
     <div class="relative">
-     <img alt="Beige Alpaca Wool Crewneck Sweater" class="w-full" height="100" src="https://storage.googleapis.com/a1aa/image/c2oabwEby8JCMFEMD4Aw62HU51J8fLl392v6SA8ozbsrVF1JA.jpg" width="100"/>
+     <img alt="foto ke 1" class="w-full" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="100"/>
     </div>
     <div class="mt-4 flex space-x-2">
-     <img alt="Small image of Beige Alpaca Wool Crewneck Sweater" class="w-1/6" height="100" src="https://storage.googleapis.com/a1aa/image/c2oabwEby8JCMFEMD4Aw62HU51J8fLl392v6SA8ozbsrVF1JA.jpg" width="75"/>
-     <img alt="Small image of Beige Alpaca Wool Crewneck Sweater" class="w-1/6" height="100" src="https://storage.googleapis.com/a1aa/image/c2oabwEby8JCMFEMD4Aw62HU51J8fLl392v6SA8ozbsrVF1JA.jpg" width="75"/>
-     <img alt="Small image of Beige Alpaca Wool Crewneck Sweater" class="w-1/6" height="100" src="https://storage.googleapis.com/a1aa/image/c2oabwEby8JCMFEMD4Aw62HU51J8fLl392v6SA8ozbsrVF1JA.jpg" width="75"/>
-     <img alt="Small image of Beige Alpaca Wool Crewneck Sweater" class="w-1/6" height="100" src="https://storage.googleapis.com/a1aa/image/c2oabwEby8JCMFEMD4Aw62HU51J8fLl392v6SA8ozbsrVF1JA.jpg" width="75"/>
+     <img alt="foto ke 2" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_2.JPG" width="75"/>
+     <img alt="foto ke 3" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_3.JPG" width="75"/>
+     <img alt="foto ke 4" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_4.JPG" width="75"/>
+     <img alt="foto ke 5" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_5.JPG" width="75"/>
+     <img alt="size chart" class="w-1/6" height="100" src="https://cdn.shopify.com/s/files/1/0363/2493/3763/files/SIZE_CHART-01_1_480x480.jpg?v=1676102635" width="75"/>
     </div>
    </div>
    <!-- Product Details Section -->
@@ -87,7 +88,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
        XL
       </button>
      </div>
-     <a class="text-sm text-gray-500 underline mt-2 inline-block" href="#">
+     <a class="text-sm text-gray-500 underline mt-2 inline-block" href="sizechart.php">
       Size Chart
      </a>
     </div>
