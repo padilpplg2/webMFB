@@ -65,7 +65,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
   <main class="container mx-auto px-4 py-8">
    <section class="bg-gray-800 text-white p-8 rounded-lg shadow-lg text-center relative">
     <h2 class="text-4xl font-bold mb-4">
-     #1 SHOP FOR WOMEN FASHION DRESSES
+     TEMPAT FASHION PRIA DAN WANITA
     </h2>
     <p class="mb-6">
      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -82,7 +82,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
       <a href="detalprodukrrq.php">
-       <img alt="Varsity RRQ" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="300"/>
+       <img alt="Varsity RRQ" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
        VARSITY
@@ -99,7 +99,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
       <a href="detalprodukjacket.php">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="300"/>
+       <img alt="Gown on a hanger" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
        JACKET
@@ -116,7 +116,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
       <a href="detalproduksepatu.php">
-       <img alt="Trousers on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/I13062318HT_1.JPG" width="300"/>
+       <img alt="Trousers on a hanger" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/I13062318HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
        SEPATU
@@ -140,7 +140,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
       <a href="detalprodukgaun.php">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/H01042411HT_1.JPG" width="300"/>
+       <img alt="Gown on a hanger" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/H01042411HT_1.JPG" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
       GAUN HANNA
@@ -156,7 +156,8 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
       <a href="detalprodukgaun3.php">
-       <img alt="Gown on a hanger" class="w-full h-48 object-cover mb-4" height="300" src="https://asset-3s.3second.co.id/p/product/H03032314PT_1.JPG" width="300"/>
+       <img alt="Gown on a hanger" class="w-48 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/703042314HT_1.JPG" width="300"/>
+
       </a>
       <h4 class="text-xl font-bold">
        GAUN HANNA

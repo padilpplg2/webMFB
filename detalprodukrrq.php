@@ -30,7 +30,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
    <!-- Image Section -->
    <div class="w-1/2">
     <div class="relative">
-     <img alt="Beige Alpaca Wool Crewneck Sweater" class="w-full" height="100" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="100"/>
+     <img alt="Beige Alpaca Wool Crewneck Sweater" class="w-96" height="100" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="50"/>
     </div>
     <div class="mt-4 flex space-x-2">
      <img alt="Small image of Beige Alpaca Wool Crewneck Sweater" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/104122315HT_5.JPG" width="75"/>
