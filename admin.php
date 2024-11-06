@@ -21,23 +21,13 @@ session_start();
                 <h5 class="sidebar-heading">Menu</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                            Dashboard
+                        <a class="nav-link" href="adminproduk.php">
+                            produk
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Pengguna
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Konten
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Pengaturan
+                        <a class="nav-link" href="login.php">
+                            kembali
                         </a>
                     </li>
                 </ul>
@@ -57,7 +47,7 @@ session_start();
                         <th>Username</th>
                         <th>Email</th>
                         <th>Password</th>
-                        <th>Aksi</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

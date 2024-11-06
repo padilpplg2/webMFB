@@ -2,13 +2,13 @@
 session_start(); // Mulai sesi
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include('koneksi.php'); // Pastikan file koneksi sudah ada
+    include('koneksi.php'); 
     
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Siapkan query untuk memeriksa email dan password
-    $stmt = $koneksi->prepare("SELECT password, role FROM user WHERE email = ?"); // Ambil role
+    // meriksa email dan password
+    $stmt = $koneksi->prepare("SELECT password, role FROM user WHERE email = ?"); // ngambil role
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             // Arahkan berdasarkan role
             if ($role === 'admin') {
-                header('Location: admin.php'); // Arahkan ke halaman admin
+                header('Location: admin.php'); //ke halaman admin
             } else {
-                header('Location: tampilan.php'); // Arahkan ke halaman utama
+                header('Location: tampilan.php'); //ke halaman utama
             }
             exit;
         } else {

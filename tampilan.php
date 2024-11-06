@@ -68,7 +68,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
      TEMPAT FASHION PRIA DAN WANITA
     </h2>
     <p class="mb-6">
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    Menjual banyak fashion pria dan wanita
     </p>
     <button class="bg-white text-gray-800 px-6 py-3 rounded-full font-bold hover:bg-gray-200">
      OUR LATEST DESIGNS
@@ -91,7 +91,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
        Rp 345.000
       </p>
       <p class="text-gray-600 mb-4">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Varsity Keren
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART
