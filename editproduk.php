@@ -29,14 +29,16 @@
 </style>
 <body>
     
-    <form action="insert.php" method="post" class="shadow">
-       
+    <form action="updateproduk.php" method="post" enctype="multipart/form-data" class="shadow">
+    <?php
+    include 'koneksi.php';
+    $id     = $_GET['id'];
+    $query  = mysqli_query($koneksi,"SELECT * FROM produk WHERE id = '$id'");
+    $produk = mysqli_fetch_array($query);
+    ?>
 
     <div class="none"><h1>Update Produk</h1></div>
-    <div class="mb-3 m-3 ">
-        <label  class="form-label">Id</label>
-        <input  class="form-control" type="text" name="id" id="" value="<?=$produk['id']?>" readonly>
-    </div>
+    <input type="hidden" name="id" value="<?=$produk['id']?>"id="">
     <div class="mb-3 m-3 ">
         <label  class="form-label">harga</label>
         <input  class="form-control" type="text" name="harga" id="" value="<?=$produk['harga']?>">
@@ -52,6 +54,10 @@
     <div class="mb-3 m-3">
         <label  class="form-label">deskripsi</label>
         <input  class="form-control" type="text" name="deskripsi" id="" value="<?=$produk['deskripsi']?>">
+    </div>
+    <div class="mb-3 m-3">
+        <label  class="form-label">foto</label>
+        <input  class="form-control" type="file" name="foto" id="" value="<?=$produk['foto']?>">
     </div>
     <button type="submit" class="btn btn-success">Update</button>
 </form>

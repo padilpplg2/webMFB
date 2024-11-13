@@ -1,18 +1,19 @@
 <?php
 include 'koneksi.php';
-session_start ();
+$id = $_GET['id'];
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+$queryData = mysqli_query($koneksi, "SELECT foto FROM produk where id='$id'");
+$data = mysqli_fetch_array($queryData);
+$fotoLama = $data['foto'];
 
-    // Hapus pengguna dari database
-    $sql = "DELETE FROM user WHERE id='$id'";
-    if ($koneksi->query($sql) === TRUE) {
-        header('Location: admin.php');
-    } else {
-        echo "Error: " . $koneksi->error;
-    }
+
+$sql = "DELETE FROM produk WHERE id ='$id'";
+$query = mysqli_query($koneksi, $sql);
+
+if($query){
+    unlink("fotoproduk/$fotoLama");
 }
 
-$koneksi->close();
+
+header("Location: adminproduk.php");
 ?>

@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $email; // Simpan email dalam sesi
             $_SESSION['role'] = $role; // Simpan role dalam sesi
             
+
+            
             // Arahkan berdasarkan role
             if ($role === 'admin') {
                 header('Location: admin.php'); //ke halaman admin

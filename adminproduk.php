@@ -49,7 +49,7 @@
                     <td>
                         <a href="editproduk.php?id=<?= $produk['id']?>">
                         <button type="submit" class="btn btn-success">Edit</button></a>
-                        <a href="deleteproduk.php?nama=<?= $produk['nama']?>">
+                        <a href="admindelete.php?id=<?= $produk['id']?>">
                         <button type="submit" class="btn btn-danger">Hapus</button></a>
                     </td>   
                 </tr>

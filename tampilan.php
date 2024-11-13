@@ -1,10 +1,11 @@
 <?php
-include("koneksi.php");
 session_start();
+include 'koneksi.php';
+$query = mysqli_query($koneksi, "SELECT * FROM produk");
 
-// Ambil nama pengguna dari sesi
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
 ?>
+
+
 <html>
  <head>
   <title>
@@ -51,7 +52,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
      </a>
      <div class="relative">
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="toggleDropdown()">
-       Account
+       ACCOUNT
       </button>
       <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden" id="dropdown">
        <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="logout.php">
@@ -79,60 +80,31 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
     <h3 class="text-2xl font-bold mb-4">
      LATEST PRODUCTS
     </h3>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-     <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="detalprodukrrq.php">
-       <img alt="Varsity RRQ" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/104122315HT_1.JPG" width="300"/>
-      </a>
-      <h4 class="text-xl font-bold">
-       VARSITY
-      </h4>
-      <p class="text-red-500 font-bold">
-       Rp 345.000
-      </p>
-      <p class="text-gray-600 mb-4">
-       Varsity Keren
-      </p>
-      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-       ADD TO CART
-      </button>
      </div>
      <div class="bg-white p-4 rounded-lg shadow-lg text-center">
+     <?php
+                while ($produk = mysqli_fetch_array($query)) {
+            ?>
       <a href="detalprodukjacket.php">
-       <img alt="Gown on a hanger" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="300"/>
+       <img alt="" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="fotoproduk/<?php echo $produk['foto'] ?>" width="300"/>
       </a>
       <h4 class="text-xl font-bold">
-       JACKET
+      <?php echo $produk['nama'] ?>
       </h4>
       <p class="text-red-500 font-bold">
-       Rp 250.000
+      <?php echo $produk['harga'] ?>
       </p>
       <p class="text-gray-600 mb-4">
-      Coach Jacket The Finest Waves
+      <?php echo $produk['deskripsi'] ?>
       </p>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
        ADD TO CART
       </button>
-     </div>
-     <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-      <a href="detalproduksepatu.php">
-       <img alt="Trousers on a hanger" class="w-52 h-48 object-cover mb-4 mx-auto" height="300" src="https://asset-3s.3second.co.id/p/product/I13062318HT_1.JPG" width="300"/>
-      </a>
-      <h4 class="text-xl font-bold">
-       SEPATU
-      </h4>
-      <p class="text-red-500 font-bold">
-       Rp 130.000
-      </p>
-      <p class="text-gray-600 mb-4">
-       Sepatu Kulit Classic 
-      </p>
-      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-       ADD TO CART
-      </button>
-     </div>
-    </div>
-   </section>
+      <?php
+      }
+       ?>
    <section class="mt-12">
     <h3 class="text-2xl font-bold mb-4">
      GAUN WANITA

@@ -6,7 +6,7 @@
     $Kategori = $_POST['kategori'];
     $Deskripsi = $_POST['deskripsi'];
 
-    $foto = $_FILES['foto']['name'];  // Missing semicolon fixed here
+    $foto = $_FILES['foto']['name']; 
     $lokasi_tmp = $_FILES['foto']['tmp_name'];
 
     // Make sure you don't miss sanitizing/escaping user inputs here to prevent SQL injection
@@ -16,15 +16,7 @@
 
     $query = mysqli_query($koneksi, $sql);
 
-    if ($query) {
-        // If query is successful, move the uploaded file to the destination folder
-        move_uploaded_file($lokasi_tmp, "../fotoproduk/$foto");
+    header("Location: adminproduk.php");
 
-        // Redirect to another page
-        header("Location: tambahproduk.php");
-        exit; // Always call exit after header redirection to stop further execution
-    } else {
-        // If there was an error with the query, you can display the error message
-        echo "Error: " . mysqli_error($koneksi);
-    }
+    move_uploaded_file($lokasi_tmp,"fotoproduk/$foto")
 ?>
