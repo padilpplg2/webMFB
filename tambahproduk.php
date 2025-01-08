@@ -16,5 +16,9 @@
  <button type="submit" class="btn btn-success">Simpan</button>
 </form>
 
+<form action="keranjang.php" method="post">
+    <input type="hidden" name="product_id" value="<?=$id?>">
+    <button type="submit">Keranjang</button>
+</form>
 </body>
 </html>

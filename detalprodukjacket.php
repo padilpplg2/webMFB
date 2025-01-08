@@ -3,7 +3,18 @@ include("koneksi.php");
 session_start();
 
 // Ambil nama pengguna dari sesi
+if(!isset($_GET['product_id'])){
+    header("Location:tampilan.php");
+}
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
+$id = $_GET['product_id']
+$query = mysqli_query($koneksi, "SELECT * FROM produk where product_id=$id");
+$dataproduk = mysqli_num_rows($query);
+if($dataproduk == 0){
+    echo "<h1>Data tidak ditemukan</h1>";
+    die();
+}
+$produk = mysqli_fetch_array($query)
 ?>
 <html>
  <head>
@@ -30,7 +41,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
    <!-- Image Section -->
    <div class="w-1/2">
     <div class="relative">
-     <img alt="foto ke 1" class="w-96" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_1.JPG" width="100"/>
+     <img alt="foto ke 1" class="w-96" height="100" <?php echo $produk['foto']?> width="100"/>
     </div>
     <div class="mt-4 flex space-x-2">
      <img alt="foto ke 2" class="w-1/6" height="100" src="https://asset-3s.3second.co.id/p/product/S08062415MR_2.JPG" width="75"/>
@@ -92,6 +103,9 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'username';
       Size Chart
      </a>
     </div>
+    <form action="proses_keranjang.php" method="post">
+        <input type="hidden" name="product_id" value="<?echo $product_id?>">
+    </form>
     <button class="w-full bg-black text-white py-3 mt-6">
      Add to Bag
     </button>
